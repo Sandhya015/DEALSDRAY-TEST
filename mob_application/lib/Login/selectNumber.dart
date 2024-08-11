@@ -29,7 +29,6 @@ class _CheckOutState extends State<CheckOut> {
     initMobileNumberState();
   }
 
-  // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initMobileNumberState() async {
     if (!await MobileNumber.hasPhonePermission) {
       await MobileNumber.requestPhonePermission;
